@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BreakTaboo - Admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Panneau Admin</h1>
+        <p>Ajouter une nouvelle question au jeu.</p>
+
+        <form id="add-question-form">
+            <label for="q-text">Question :</label>
+            <textarea id="q-text" rows="3" required></textarea>
+            
+            <label for="q-answer">Réponse correcte :</label>
+            <select id="q-answer" required>
+                <option value="mythe">Mythe</option>
+                <option value="realite">Réalité</option>
+            </select>
+            
+            <label for="q-explanation">Explication (la réalité) :</label>
+            <textarea id="q-explanation" rows="3" required></textarea>
+            
+            <label for="q-level">Niveau de difficulté :</label>
+            <input type="number" id="q-level" value="1" min="1" required>
+            
+            <button type="submit">Ajouter la question</button>
+        </form>
+        
+        <p id="admin-feedback"></p>
+        
+        <a href="index.html" class="nav-link" style="margin-top: 20px;">Retour au Jeu</a>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>
